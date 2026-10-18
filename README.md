@@ -30,7 +30,9 @@ Then open http://localhost:8080
 
 ## Photos
 
-All photos (including the flower bands set in `js/main.js`) are placeholders hot-linked from Unsplash (free license). Replace the
+Story and gallery photos are placeholders hot-linked from Unsplash (free license).
+The flower decorations in `img/flowers/` were cut out of free Unsplash photos with
+`tools/cutout.py` and arranged with `tools/compose.py` (needs Pillow + numpy). Replace the
 `src` URLs with your own files (e.g. put them in `img/` and use `img/name.jpg`).
 
 ## Quiz facts

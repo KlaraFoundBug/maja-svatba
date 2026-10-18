@@ -39,22 +39,24 @@
   if (footer) {
     footer.className = "footer";
     footer.innerHTML = `
+      <img class="footer__flowers" src="img/flowers/flowers-garland.webp" alt="" aria-hidden="true">
       <p class="footer__brand">${cfg.bride} <span class="amp">&amp;</span> ${cfg.groom}</p>
-      <p>${cfg.dateLabel} · ${cfg.venue}</p>
-      <ul class="footer__links">${navItems}</ul>`;
+      <p>${cfg.dateLabel} · ${cfg.venue}</p>`;
   }
 
-  // ---------- Real flowers along both edges of the page ----------
-  // Photos fade into the paper on the inner side (mask in CSS). Placeholder photos from Unsplash.
-  // portrait crop matches the tall bands: sharp on desktop, still light on phones
-  const flowerPhoto = (id) => `url('https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&h=1400&q=70')`;
-  const florals = document.createElement("div");
-  florals.className = "florals";
-  florals.setAttribute("aria-hidden", "true");
-  florals.innerHTML = `
-    <div class="florals__side florals__side--left" style="background-image:${flowerPhoto("photo-1597720301887-dc3e3bd15daf")}"></div>
-    <div class="florals__side florals__side--right" style="background-image:${flowerPhoto("photo-1755338119197-8a2e92c85602")}"></div>`;
-  document.body.prepend(florals);
+  // ---------- Flower corners on inner pages (desktop; hidden on phones/tablets via CSS) ----------
+  if (page !== "index") {
+    const corners = document.createElement("div");
+    corners.className = "page-corners";
+    corners.setAttribute("aria-hidden", "true");
+    corners.innerHTML = `
+      <img class="page-corners__l" src="img/flowers/flowers-corner.webp" alt="">
+      <img class="page-corners__r" src="img/flowers/flowers-corner.webp" alt="">`;
+    document.body.prepend(corners);
+    const placeCorners = () => (corners.style.top = `${header?.offsetHeight ?? 0}px`);
+    addEventListener("resize", placeCorners);
+    placeCorners();
+  }
 
   // ---------- RSVP links ----------
   document.querySelectorAll("[data-rsvp]").forEach((a) => (a.href = cfg.rsvpUrl));
