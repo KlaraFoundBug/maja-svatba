@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Náš příběh · Maja &amp; Jakub</title>
+  <meta name="description" content="Příběh Maji a Jakuba, barvy svatby a praktické informace pro hosty.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="page-story">
+
+  <!-- ========== NAVIGACE ========== -->
+  <header class="nav" data-nav>
+    <nav class="nav__inner" aria-label="Hlavní navigace">
+      <ul class="nav__links nav__links--left">
+        <li><a href="index.html">Svatba</a></li>
+        <li><a href="index.html#program">Program</a></li>
+      </ul>
+      <a class="nav__mono" href="index.html" aria-label="Domů">M<span>&amp;</span>J</a>
+      <ul class="nav__links nav__links--right">
+        <li><a href="pribeh.html" aria-current="page">Náš příběh</a></li>
+        <li><a href="pribeh.html#info">Info</a></li>
+      </ul>
+      <a class="btn btn--small nav__rsvp" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a>
+      <button class="nav__burger" aria-label="Otevřít menu" aria-expanded="false" data-burger><span></span><span></span></button>
+    </nav>
+    <div class="nav__overlay" data-overlay>
+      <ul>
+        <li><a href="index.html">Svatba</a></li>
+        <li><a href="index.html#program">Program</a></li>
+        <li><a href="index.html#misto">Místo</a></li>
+        <li><a href="pribeh.html">Náš příběh</a></li>
+        <li><a href="pribeh.html#barvy">Barvy svatby</a></li>
+        <li><a href="pribeh.html#info">Praktické info</a></li>
+        <li><a class="btn" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <img class="floral floral--tl" src="img/florals-corner.svg" alt="" aria-hidden="true">
+      <p class="eyebrow">Maja &amp; Jakub</p>
+      <h1>Náš <em>příběh</em></h1>
+      <p>Jak to všechno začalo, co o nás (možná) nevíte a vše, co potřebujete vědět ke svatbě.</p>
+      <ul class="subnav">
+        <li><a href="#pribeh">Příběh</a></li>
+        <li><a href="#galerie">Fotky</a></li>
+        <li><a href="#barvy">Barvy svatby</a></li>
+        <li><a href="#info">Praktické info</a></li>
+      </ul>
+    </section>
+
+    <!-- ========== NOVINY ==========
+         Kvízové údaje jsou označené data-quiz="1", "2"…
+         Hosté je nevidí; organizátoři si je zvýrazní přidáním ?kviz do adresy (pribeh.html?kviz). -->
+    <section class="paper-wrap" id="pribeh">
+      <article class="newspaper reveal">
+        <header class="np-masthead">
+          <div class="np-meta">
+            <span>Ročník I. · Číslo 1</span>
+            <span>Vychází 6. července 2027</span>
+            <span>Cena: jeden úsměv</span>
+          </div>
+          <p class="np-title">Svatební <span>listy</span></p>
+          <p class="np-tagline">Jediný deník, který píše výhradně o Maje a Jakubovi</p>
+        </header>
+
+        <h1 class="np-headline">Senzace! Maja a Jakub si řeknou „ano“</h1>
+        <p class="np-deck">Po <span data-quiz="1">sedmi letech</span> společného života se dvojice rozhodla to zpečetit. Přinášíme exkluzivní pohled do jejich minulosti.</p>
+
+        <div class="np-grid">
+          <section class="np-article">
+            <p class="np-kicker">Z archivu</p>
+            <h3>Maja: holčička, která nikdy neseděla v klidu</h3>
+            <p class="np-byline">Píše naše zvláštní zpravodajka</p>
+            <figure class="np-figure np-figure--tall">
+              <img src="img/foto/maja-detstvi.svg" alt="Maja jako malá" loading="lazy">
+              <figcaption>Maja ve svých pěti letech. Už tehdy s neodmyslitelnou mašlí.</figcaption>
+            </figure>
+            <p class="np-dropcap">Lorem ipsum dolor sit amet, Maja se narodila v <span data-quiz="2">Českých Budějovicích</span> a od malička prý odmítala nosit cokoli jiného než červenou. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, její první mazlíček byla želva jménem <span data-quiz="3">Bohouš</span>, která se dožila úctyhodného věku. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </section>
+
+          <section class="np-article">
+            <p class="np-kicker">Z archivu</p>
+            <h3>Jakub: malý stavitel velkých plánů</h3>
+            <p class="np-byline">Píše náš sportovní redaktor</p>
+            <figure class="np-figure np-figure--tall">
+              <img src="img/foto/jakub-detstvi.svg" alt="Jakub jako malý" loading="lazy">
+              <figcaption>Jakub a jeho první kolo. Kolo to nepřežilo.</figcaption>
+            </figure>
+            <p class="np-dropcap">Duis aute irure dolor in reprehenderit, Jakub vyrůstal se <span data-quiz="4">dvěma staršími sestrami</span>, což ho prý naučilo trpělivosti. In voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, jako malý chtěl být <span data-quiz="5">kosmonautem</span>, nakonec se ale spokojil s horolezectvím. Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </section>
+
+          <section class="np-article np-article--wide">
+            <p class="np-kicker">Hlavní zpráva</p>
+            <h3>Osudné setkání: jak se to všechno stalo</h3>
+            <p class="np-byline">Rekonstrukce událostí podle výpovědí svědků</p>
+            <div class="np-cols">
+              <figure class="np-figure">
+                <img src="img/foto/seznameni.svg" alt="Místo, kde se Maja a Jakub poznali" loading="lazy">
+                <figcaption>Místo činu. Redakce ho navštívila a potvrzuje: káva je tu opravdu výborná.</figcaption>
+              </figure>
+              <p class="np-dropcap">Sed ut perspiciatis unde omnis iste natus error sit voluptatem. Bylo to v <span data-quiz="6">říjnu 2019</span> na <span data-quiz="7">svatbě společného kamaráda</span>, kde Jakub omylem vylil Maje na šaty sklenku červeného vína. Accusantium doloremque laudantium, totam rem aperiam.</p>
+              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+              <blockquote class="np-quote">„Nejdřív jsem se na něj zlobila. Pak mi koupil nové šaty.“</blockquote>
+              <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Na první rande vyrazili do <span data-quiz="8">kina na Pelíšky</span> a Jakub prý usnul už po dvaceti minutách. Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+              <p>Ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+            </div>
+          </section>
+
+          <section class="np-article">
+            <p class="np-kicker">Společnost</p>
+            <h3>Život ve dvou: cesty, kočka a jedno velké „ano“</h3>
+            <figure class="np-figure">
+              <img src="img/foto/spolecny-zivot.svg" alt="Maja a Jakub na cestách" loading="lazy">
+              <figcaption>Na jedné z mnoha společných cest.</figcaption>
+            </figure>
+            <p>At vero eos et accusamus et iusto odio dignissimos. Spolu už navštívili <span data-quiz="9">14 zemí</span>, nejvíc vzpomínají na Japonsko. Doma na ně čeká kočka <span data-quiz="10">Mourek</span>, který podle všeho vládne celé domácnosti.</p>
+          </section>
+
+          <section class="np-article">
+            <p class="np-kicker">Exkluzivně</p>
+            <h3>Žádost o ruku: slzy, déšť a jeden prstýnek</h3>
+            <figure class="np-figure">
+              <img src="img/foto/zasnuby.svg" alt="Zásnuby" loading="lazy">
+              <figcaption>Okamžik, kdy řekla ano.</figcaption>
+            </figure>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio. Jakub požádal Maju o ruku <span data-quiz="11">na vrcholu Sněžky</span> za hustého deště. Prstýnek měl celou cestu nahoru schovaný <span data-quiz="12">v ponožce</span>.</p>
+          </section>
+
+          <aside class="np-box">
+            <div class="np-box__icon" aria-hidden="true">?</div>
+            <div>
+              <h4>Čtěte pozorně!</h4>
+              <p>Na svatbě proběhne kvíz o novomanželích. Všechny odpovědi se skrývají v tomto vydání Svatebních listů. Vítěze čeká sladká odměna.</p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== GALERIE ========== -->
+    <section class="section" id="galerie" aria-labelledby="gallery-title">
+      <header class="section__head reveal">
+        <p class="eyebrow">Momentky</p>
+        <h2 id="gallery-title">Pár našich fotek</h2>
+        <img class="divider" src="img/divider.svg" alt="" aria-hidden="true">
+      </header>
+      <div class="gallery">
+        <figure class="reveal"><img src="img/foto/galerie-1.svg" alt="Momentka 1" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/foto/galerie-2.svg" alt="Momentka 2" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/foto/galerie-3.svg" alt="Momentka 3" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/foto/galerie-4.svg" alt="Momentka 4" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/foto/galerie-5.svg" alt="Momentka 5" loading="lazy"></figure>
+        <figure class="reveal"><img src="img/foto/galerie-6.svg" alt="Momentka 6" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- ========== BARVY SVATBY ========== -->
+    <section class="colors" id="barvy" aria-labelledby="colors-title">
+      <div class="section">
+        <header class="section__head reveal">
+          <p class="eyebrow">Paleta</p>
+          <h2 id="colors-title">Barvy svatby</h2>
+          <img class="divider" src="img/divider.svg" alt="" aria-hidden="true">
+        </header>
+        <div class="swatches reveal">
+          <div class="swatch"><div class="swatch__chip" style="background: var(--burgundy)"></div><h3>Bordó</h3><p>#5C1A1E</p></div>
+          <div class="swatch swatch--main"><div class="swatch__chip" style="background: var(--red)"></div><h3>Rudá</h3><p>#B3211E</p><span class="swatch__badge">Hlavní barva</span></div>
+          <div class="swatch"><div class="swatch__chip" style="background: var(--rose)"></div><h3>Pudrová růže</h3><p>#D4999A</p></div>
+          <div class="swatch"><div class="swatch__chip" style="background: var(--sage-light)"></div><h3>Světlá šalvěj</h3><p>#A8C98C</p></div>
+          <div class="swatch"><div class="swatch__chip" style="background: var(--forest)"></div><h3>Lesní zelená</h3><p>#1E4A33</p></div>
+        </div>
+        <div class="flowers">
+          <img class="reveal" src="img/florals-corner.svg" alt="Rudé růže a bílá gypsophila">
+          <div class="reveal">
+            <p class="eyebrow">Květiny</p>
+            <h3 style="font-size:2rem;margin-bottom:.6rem">Rudé růže &amp; bílá gypsophila</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Celou svatbou nás budou provázet rudé růže a jemná bílá gypsophila (nevěstin závoj).</p>
+          </div>
+        </div>
+        <p class="dresscode reveal"><strong>Dress code:</strong> budeme rádi, když se k naší paletě přidáte – třeba kravatou, šálou nebo šaty. Jen prosíme: bílou nechte nevěstě. (dummy text)</p>
+      </div>
+    </section>
+
+    <!-- ========== PRAKTICKÉ INFO ========== -->
+    <section class="section" id="info" aria-labelledby="info-title">
+      <header class="section__head reveal">
+        <p class="eyebrow">Vše, co potřebujete vědět</p>
+        <h2 id="info-title">Praktické informace</h2>
+        <img class="divider" src="img/divider.svg" alt="" aria-hidden="true">
+      </header>
+      <div class="venue reveal">
+        <img src="img/foto/misto.svg" alt="Zámecký statek Lipová" loading="lazy">
+        <div>
+          <p class="eyebrow">Místo konání</p>
+          <h3>Zámecký statek Lipová</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Obřad i hostina proběhnou na jednom místě.</p>
+          <a class="btn btn--small" href="index.html#misto">Zobrazit mapu</a>
+        </div>
+      </div>
+      <div class="info-grid">
+        <div class="info-card reveal"><p class="eyebrow">01</p><h3>Ubytování</h3><p>Pro hosty máme zamluvené pokoje přímo na statku. Zájem prosím uveďte ve formuláři. Lorem ipsum dolor sit amet.</p></div>
+        <div class="info-card reveal"><p class="eyebrow">02</p><h3>Doprava &amp; parkování</h3><p>Parkoviště je přímo u statku. Po půlnoci pojede kyvadlová doprava do Budějovic. Lorem ipsum.</p></div>
+        <div class="info-card reveal"><p class="eyebrow">03</p><h3>Dary</h3><p>Největší dar je, že s námi budete. Pokud nás přesto chcete obdarovat, budeme rádi za příspěvek na svatební cestu.</p></div>
+        <div class="info-card reveal"><p class="eyebrow">04</p><h3>Děti</h3><p>Děti jsou vítány! Bude pro ně připravený dětský koutek. Počet dětí prosím uveďte ve formuláři.</p></div>
+        <div class="info-card reveal"><p class="eyebrow">05</p><h3>Fotky</h3><p>Během obřadu prosíme o „unplugged“ – telefony v kapse. Fotky od fotografa s vámi rádi sdílíme.</p></div>
+        <div class="info-card reveal"><p class="eyebrow">06</p><h3>Kontakt</h3><p>Svědkyně Anna: <a href="tel:+420000000000">+420 000 000 000</a><br>Svědek Petr: <a href="tel:+420000000001">+420 000 000 001</a></p></div>
+      </div>
+    </section>
+
+    <section class="rsvp" aria-labelledby="rsvp-title">
+      <img class="floral floral--rsvp" src="img/florals-corner.svg" alt="" aria-hidden="true">
+      <div class="rsvp__card reveal">
+        <p class="eyebrow">Prosíme o odpověď do 1. 5. 2027</p>
+        <h2 id="rsvp-title">Přijdete?</h2>
+        <p>Dejte nám vědět, jestli dorazíte, a vyberte si menu.</p>
+        <a class="btn btn--lg" data-rsvp href="#" target="_blank" rel="noopener">Vyplnit formulář</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__mono">M<span>&amp;</span>J</p>
+    <p>6. 7. 2027 · Zámecký statek Lipová</p>
+    <p class="footer__small"><a href="index.html">Zpět na hlavní stránku</a></p>
+  </footer>
+</body>
+</html>
