@@ -100,7 +100,9 @@
     };
     const onScroll = () => {
       const rect = stage.getBoundingClientRect();
-      target = clamp(-rect.top / (rect.height - innerHeight));
+      // starts while the envelope is still entering the screen (top at 75% of the viewport)
+      const lead = innerHeight * 0.75;
+      target = clamp((lead - rect.top) / (rect.height - innerHeight + lead));
       if (!frame) frame = requestAnimationFrame(draw);
     };
     addEventListener("scroll", onScroll, { passive: true });

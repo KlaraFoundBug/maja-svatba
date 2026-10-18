@@ -156,6 +156,67 @@ def main(sheet_path):
     place(s, stem_rose, 550, 700, 0.8, 0)
     save(s, "flowers-sprig", (600, 760))
 
+    # D: open, asymmetric round wreath (frames the RSVP box)
+    w = Image.new("RGBA", (1300, 1300), (0, 0, 0, 0))
+    cx, cy, R = 650, 650, 430
+    d = ImageDraw.Draw(w)
+    for off, start, end in ((0, 120, 400), (14, 135, 380)):  # thin vine the flowers sit on
+        d.arc([cx - R - off, cy - R - off, cx + R + off, cy + R + off], start, end, fill=STEM, width=3)
+    for i, deg in enumerate(range(0, 360, 15)):
+        a_ = math.radians(deg)
+        x, y = cx + math.cos(a_) * R, cy + math.sin(a_) * R
+        tangent = a_ + math.pi / 2 * (1 if i % 2 else -1)
+        place(w, gypsophila(230, tangent * 0.98, 20 + i, depth=4), x, y)
+    # cluster bottom-left
+    for deg, sc, rot in ((150, 0.62, 15), (118, 0.42, -25), (178, 0.38, 40)):
+        a_ = math.radians(deg)
+        place(w, rose, cx + math.cos(a_) * R, cy + math.sin(a_) * R, sc, rot)
+    place(w, bud, cx + math.cos(math.radians(200)) * R, cy + math.sin(math.radians(200)) * R, 0.34, 55)
+    place(w, bud, cx + math.cos(math.radians(95)) * R, cy + math.sin(math.radians(95)) * R, 0.3, -150, flip=True)
+    # cluster top-right
+    for deg, sc, rot in ((325, 0.48, -20), (350, 0.34, 30)):
+        a_ = math.radians(deg)
+        place(w, rose, cx + math.cos(a_) * R, cy + math.sin(a_) * R, sc, rot)
+    place(w, bud, cx + math.cos(math.radians(295)) * R, cy + math.sin(math.radians(295)) * R, 0.3, -20)
+    save(w, "flowers-wreath", (900, 900))
+
+    # E: tied bouquet
+    b = Image.new("RGBA", (1100, 1400), (0, 0, 0, 0))
+    d = ImageDraw.Draw(b)
+    tie = (560, 1000)
+    heads = [(420, 430), (640, 380), (530, 560), (760, 560), (330, 640)]
+    for hx, hy in heads + [(280, 300), (860, 330)]:
+        d.line([tie, (hx, hy + 60)], fill=STEM, width=4)
+    for k, ang in enumerate((-0.6, -1.0, -1.35, -1.8, -2.15, -2.55)):
+        place(b, gypsophila(300, ang, 40 + k), 560 + math.cos(ang) * 330, 600 + math.sin(ang) * 300)
+    for sx in (-60, -25, 10, 40, 70):  # stems below the tie
+        d.line([tie, (tie[0] + sx, 1330)], fill=STEM, width=4)
+    place(b, bud, 280, 300, 0.36, 20)
+    place(b, bud, 860, 330, 0.36, -25, flip=True)
+    for (hx, hy), sc, rot in zip(heads, (0.5, 0.48, 0.55, 0.42, 0.4), (10, -15, 0, 25, -20)):
+        place(b, rose, hx, hy, sc, rot)
+    d = ImageDraw.Draw(b)
+    for k in range(3):  # ribbon wraps + tails
+        d.line([(tie[0] - 70, tie[1] - 18 + k * 16), (tie[0] + 70, tie[1] - 26 + k * 16)], fill=(150, 24, 30, 255), width=9)
+    d.line([(tie[0] - 10, tie[1] + 10), (tie[0] - 90, tie[1] + 150)], fill=(150, 24, 30, 255), width=8)
+    d.line([(tie[0] + 10, tie[1] + 10), (tie[0] + 70, tie[1] + 170)], fill=(150, 24, 30, 255), width=8)
+    save(b, "flowers-bouquet", (520, 680))
+
+    # F: small horizontal divider (replaces the fleuron)
+    v = Image.new("RGBA", (900, 300), (0, 0, 0, 0))
+    place(v, gypsophila(170, math.pi + 0.15, 60, depth=4), 330, 160)
+    place(v, gypsophila(170, -0.15, 61, depth=4), 570, 160)
+    place(v, rose, 450, 150, 0.26, 0)
+    save(v, "flowers-divider", (360, 120))
+
+    # G: little spray tucked onto photo corners
+    pc = Image.new("RGBA", (800, 800), (0, 0, 0, 0))
+    place(pc, gypsophila(220, -0.2, 70), 420, 260)
+    place(pc, gypsophila(200, 1.3, 71), 260, 420)
+    place(pc, bud, 470, 240, 0.3, -60)
+    place(pc, rose, 250, 250, 0.42, 10)
+    save(pc, "flowers-photo", (360, 360))
+
 
 if __name__ == "__main__":
     main(sys.argv[1])
