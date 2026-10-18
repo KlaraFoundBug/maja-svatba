@@ -354,8 +354,8 @@ p { margin: 0 0 1em; }
 .garland { display: none; }
 .wreath { position: relative; width: fit-content; margin: 0 auto; padding: 0 .2em; }
 .wreath__flowers { position: absolute; width: clamp(220px, 23vw, 350px); pointer-events: none; z-index: -1; }
-.wreath__flowers--tl { top: -26%; left: -58%; }
-.wreath__flowers--br { bottom: -20%; right: -72%; transform: rotate(180deg); }
+.wreath__flowers--tl { top: -6%; left: -74%; }
+.wreath__flowers--br { bottom: -8%; right: -78%; transform: rotate(180deg); }
 .intro, .page-head { position: relative; z-index: 0; }
 
 /* top is set from the header height in main.js, so the flowers start just under the menu */

@@ -31,8 +31,9 @@ Then open http://localhost:8080
 ## Photos
 
 Story and gallery photos are placeholders hot-linked from Unsplash (free license).
-The flower decorations in `img/flowers/` were cut out of free Unsplash photos with
-`tools/cutout.py` and arranged with `tools/compose.py` (needs Pillow + numpy). Replace the
+The watercolour flowers in `img/flowers/` are built by `tools/flowers.py`: roses from free
+Pixabay clipart (https://pixabay.com/illustrations/rose-bloom-petals-flower-plant-9551838/,
+Pixabay Content License) + procedurally painted baby's breath. Needs Pillow + numpy. Replace the
 `src` URLs with your own files (e.g. put them in `img/` and use `img/name.jpg`).
 
 ## Quiz facts
