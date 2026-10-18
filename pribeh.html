@@ -14,12 +14,15 @@
   <script src="js/main.js" defer></script>
 </head>
 <body data-page="pribeh">
-  <header data-masthead></header>
+  <header data-masthead>
+    <!-- záložní menu, kdyby se nenačetl JavaScript (main.js ho nahradí) -->
+    <nav class="nav"><ul class="nav__list" style="display:flex"><li><a href="index.html">Úvod</a></li><li><a href="program.html">Program</a></li><li><a href="misto.html">Místo</a></li><li><a href="pribeh.html">Náš příběh</a></li><li><a href="info.html">Informace</a></li></ul></nav>
+  </header>
 
   <!--
     Kvízové údaje jsou označené <span data-quiz="N">. Hosté nic nepoznají;
     organizátoři si je zvýrazní otevřením pribeh.html?kviz
-    SKUTEČNÉ: Coca-Cola, kočka Queen, padel. Vše ostatní je zatím vymyšlené (dummy).
+    SKUTEČNÉ: Coca-Cola, kočka Queen, padel, zásnuby 20. 11. 2025. Vše ostatní je zatím vymyšlené (dummy).
   -->
 
   <main class="wrap">
@@ -101,7 +104,7 @@
           <span class="chapter__num">Kapitola V.</span>
           <h2>Spolu</h2>
           <p class="dropcap">Nam libero tempore. Volné večery tráví nejčastěji na padelovém kurtu – Míša hraje <span data-quiz="7">třikrát týdně</span>, Mája tvrdí, že jen „když má náladu“. Cum soluta nobis est eligendi optio cumque nihil impedit.</p>
-          <p>A pak přišla otázka: Míša požádal Máju o ruku <span data-quiz="8">na dovolené v Itálii</span>. Quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
+          <p>A pak přišel <span data-quiz="8">20. listopad 2025</span>: Míša poklekl a Mája řekla ano. Quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.</p>
         </div>
       </div>
     </article>
@@ -113,7 +116,7 @@
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
+    <section class="section section--flush">
       <div class="section__title">
         <p class="fleuron" aria-hidden="true"></p>
         <h2>Pár fotek</h2>

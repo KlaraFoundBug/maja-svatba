@@ -5,7 +5,8 @@ Static site (plain HTML/CSS/JS, no build step). Four pages:
 | Page | File |
 | --- | --- |
 | Úvod – names, envelope animation, countdown, RSVP | `index.html` |
-| Program + venue map | `program.html` |
+| Program | `program.html` |
+| Místo – venue, map, directions | `misto.html` |
 | Náš příběh – story chapters, quiz facts, photos | `pribeh.html` |
 | Informace – colours, flowers, dress code, practical info | `info.html` |
 
@@ -24,16 +25,16 @@ Then open http://localhost:8080
 | Names, date (countdown), venue, Google Form link | `js/config.js` |
 | Menu, header, footer (shared by all pages) | `js/main.js` (top) |
 | Colours | CSS variables at the top of `css/style.css` |
-| Map location | `program.html` → `<iframe>` `q=` parameter and the "Navigovat" link |
+| Map location | `misto.html` → `<iframe>` `q=` parameter and the "Navigovat" link |
 | Invite in the envelope | replace `img/pozvanka.svg` with a photo/scan of the real invite (portrait, ~5:7) and update `src` in `index.html` |
 
 ## Photos
 
-All photos are placeholders hot-linked from Unsplash (free license). Replace the
+All photos (including the flower bands set in `js/main.js`) are placeholders hot-linked from Unsplash (free license). Replace the
 `src` URLs with your own files (e.g. put them in `img/` and use `img/name.jpg`).
 
 ## Quiz facts
 
 Facts for the wedding quiz are wrapped in `<span data-quiz="N">` in `pribeh.html`.
 Guests don't see them; open `pribeh.html?kviz` to highlight and number them.
-Real so far: Coca-Cola, cat Queen, padel. Everything else is dummy text.
+Real so far: Coca-Cola, cat Queen, padel, engagement 20. 11. 2025. Everything else is dummy text.

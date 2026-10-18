@@ -14,7 +14,10 @@
   <script src="js/main.js" defer></script>
 </head>
 <body data-page="program">
-  <header data-masthead></header>
+  <header data-masthead>
+    <!-- záložní menu, kdyby se nenačetl JavaScript (main.js ho nahradí) -->
+    <nav class="nav"><ul class="nav__list" style="display:flex"><li><a href="index.html">Úvod</a></li><li><a href="program.html">Program</a></li><li><a href="misto.html">Místo</a></li><li><a href="pribeh.html">Náš příběh</a></li><li><a href="info.html">Informace</a></li></ul></nav>
+  </header>
 
   <main class="wrap">
     <section class="page-head">
@@ -50,28 +53,9 @@
       </div>
     </section>
 
-    <section class="section" id="misto">
-      <div class="section__title">
-        <p class="fleuron" aria-hidden="true"></p>
-        <h2>Místo konání</h2>
-      </div>
-      <div class="venue">
-        <div>
-          <!-- dummy fotka – nahradit fotkou stodoly -->
-          <figure class="venue__photo">
-            <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=1000&q=80" alt="Stodola (ilustrační foto)" loading="lazy">
-            <figcaption>Ilustrační foto</figcaption>
-          </figure>
-          <h3>Stodola Plástovice</h3>
-          <address>Plástovice 5<br>373 48 Sedlec-Dívčice</address>
-          <p>Obřad, hostina i zábava – vše na jednom místě, mezi ovocným sadem a zahradou. Parkovat můžete přímo u areálu.</p>
-          <a class="btn btn--ghost" href="https://maps.google.com/?q=Stodola+Pl%C3%A1stovice,+Pl%C3%A1stovice+5" target="_blank" rel="noopener">Navigovat</a>
-        </div>
-        <div class="map">
-          <iframe title="Mapa – Stodola Plástovice" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Stodola+Pl%C3%A1stovice,+Pl%C3%A1stovice+5,+Sedlec-D%C3%ADv%C4%8Dice&amp;z=14&amp;output=embed"></iframe>
-        </div>
-      </div>
+    <section class="section section--center">
+      <p class="fleuron" aria-hidden="true"></p>
+      <p>Vše se odehraje ve <a href="misto.html">Stodole Plástovice</a>.</p>
     </section>
   </main>
 

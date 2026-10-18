@@ -14,7 +14,10 @@
   <script src="js/main.js" defer></script>
 </head>
 <body data-page="index">
-  <header data-masthead></header>
+  <header data-masthead>
+    <!-- záložní menu, kdyby se nenačetl JavaScript (main.js ho nahradí) -->
+    <nav class="nav"><ul class="nav__list" style="display:flex"><li><a href="index.html">Úvod</a></li><li><a href="program.html">Program</a></li><li><a href="misto.html">Místo</a></li><li><a href="pribeh.html">Náš příběh</a></li><li><a href="info.html">Informace</a></li></ul></nav>
+  </header>
 
   <main>
     <section class="intro">
@@ -24,15 +27,9 @@
       <p class="intro__place">Stodola Plástovice, jižní Čechy</p>
     </section>
 
-    <!-- Fotka květin (dummy z Unsplash) – později nahradit vlastní -->
-    <figure class="plate">
-      <img src="https://images.unsplash.com/photo-1756563134785-6243473ae0d2?auto=format&fit=crop&w=1600&q=80" alt="Rudé růže s bílou gypsophilou">
-    </figure>
-
     <!-- Obálka s pozvánkou – otevře se při scrollování -->
     <section class="envelope-stage" data-envelope-stage aria-label="Pozvánka">
       <div class="envelope-sticky">
-        <p class="envelope-caption" data-env-caption>Máte poštu…</p>
         <div class="envelope-scene" data-env-scene>
           <div class="envelope">
             <div class="env-back"></div>
