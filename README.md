@@ -1,6 +1,6 @@
 # Mája & Míša – svatební web
 
-Static site (plain HTML/CSS/JS, no build step). Four pages:
+Static site (plain HTML/CSS/JS, no build step). Five pages:
 
 | Page | File |
 | --- | --- |
@@ -8,7 +8,7 @@ Static site (plain HTML/CSS/JS, no build step). Four pages:
 | Program | `program.html` |
 | Místo – venue, map, directions | `misto.html` |
 | Náš příběh – story chapters, quiz facts, photos | `pribeh.html` |
-| Informace – colours, flowers, dress code, practical info | `info.html` |
+| Informace – colours, dress code, practical info | `info.html` |
 
 ## Run locally
 
