@@ -3,171 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maja &amp; Jakub · 6. 7. 2027</title>
-  <meta name="description" content="Svatba Maji a Jakuba – 6. července 2027. Program, potvrzení účasti a vše důležité.">
+  <title>Mája &amp; Míša · 6. 7. 2027</title>
+  <meta name="description" content="Svatba Máji a Míši – 6. července 2027, Stodola Plástovice.">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/config.js"></script>
   <script src="js/main.js" defer></script>
 </head>
-<body class="page-home">
-
-  <!-- ========== NAVIGACE ========== -->
-  <header class="nav" data-nav>
-    <nav class="nav__inner" aria-label="Hlavní navigace">
-      <ul class="nav__links nav__links--left">
-        <li><a href="index.html" aria-current="page">Svatba</a></li>
-        <li><a href="index.html#program">Program</a></li>
-      </ul>
-      <a class="nav__mono" href="index.html" aria-label="Domů">M<span>&amp;</span>J</a>
-      <ul class="nav__links nav__links--right">
-        <li><a href="pribeh.html">Náš příběh</a></li>
-        <li><a href="pribeh.html#info">Info</a></li>
-      </ul>
-      <a class="btn btn--small nav__rsvp" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a>
-      <button class="nav__burger" aria-label="Otevřít menu" aria-expanded="false" data-burger><span></span><span></span></button>
-    </nav>
-    <div class="nav__overlay" data-overlay>
-      <ul>
-        <li><a href="index.html">Svatba</a></li>
-        <li><a href="index.html#program">Program</a></li>
-        <li><a href="index.html#misto">Místo</a></li>
-        <li><a href="pribeh.html">Náš příběh</a></li>
-        <li><a href="pribeh.html#barvy">Barvy svatby</a></li>
-        <li><a href="pribeh.html#info">Praktické info</a></li>
-        <li><a class="btn" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a></li>
-      </ul>
-    </div>
-  </header>
+<body data-page="index">
+  <header data-masthead></header>
 
   <main>
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-      <img class="floral floral--tl" src="img/florals-corner.svg" alt="" aria-hidden="true">
-      <img class="floral floral--br" src="img/florals-corner.svg" alt="" aria-hidden="true">
-      <div class="hero__content reveal">
-        <p class="eyebrow">Bereme se!</p>
-        <h1 class="hero__names">Maja <span class="amp">&amp;</span> Jakub</h1>
-        <p class="hero__date">06 <i>·</i> 07 <i>·</i> 2027</p>
-        <p class="hero__place">Zámecký statek Lipová · jižní Čechy</p>
-        <a class="scroll-hint" href="#pozvanka" aria-label="Posunout dolů">
-          <span>Otevřete pozvánku</span>
-          <svg viewBox="0 0 20 30" aria-hidden="true"><path d="M10 2v24M3 19l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-        </a>
-      </div>
+    <section class="intro">
+      <span class="smallcaps kicker">Bereme se</span>
+      <h1 class="intro__names">Mája <span class="amp">&amp;</span> Míša</h1>
+      <p class="intro__date">06 · 07 · 2027</p>
+      <p class="intro__place">Stodola Plástovice, jižní Čechy</p>
     </section>
 
-    <!-- ========== OBÁLKA S POZVÁNKOU (scroll animace) ========== -->
-    <section class="envelope-stage" id="pozvanka" data-envelope-stage>
+    <!-- Fotka květin (dummy z Unsplash) – později nahradit vlastní -->
+    <figure class="plate">
+      <img src="https://images.unsplash.com/photo-1756563134785-6243473ae0d2?auto=format&fit=crop&w=1600&q=80" alt="Rudé růže s bílou gypsophilou">
+    </figure>
+
+    <!-- Obálka s pozvánkou – otevře se při scrollování -->
+    <section class="envelope-stage" data-envelope-stage aria-label="Pozvánka">
       <div class="envelope-sticky">
         <p class="envelope-caption" data-env-caption>Máte poštu…</p>
         <div class="envelope-scene" data-env-scene>
           <div class="envelope">
             <div class="env-back"></div>
+            <div class="env-card-clip">
+              <!-- Sem pak fotku/sken skutečné pozvánky (na výšku, poměr cca 5:7) -->
+              <img class="env-card" src="img/pozvanka.svg" alt="Pozvánka: Mája a Míša, 6. 7. 2027, obřad ve 14:00, Stodola Plástovice">
+            </div>
+            <svg class="env-front" viewBox="0 0 100 68" preserveAspectRatio="none" aria-hidden="true">
+              <!-- boční chlopně -->
+              <path d="M0 0 L49 37 Q50 37.8 51 37 L100 0 L100 68 L0 68Z" fill="var(--env-side)"/>
+              <!-- spodní chlopeň -->
+              <path d="M0 68 L47 34 Q50 32 53 34 L100 68Z" fill="var(--env-bottom)"/>
+              <path d="M0 0 L49 37 Q50 37.8 51 37 L100 0" fill="none" stroke="rgba(90,60,40,.18)" stroke-width=".3"/>
+              <path d="M0 68 L47 34 Q50 32 53 34 L100 68" fill="none" stroke="rgba(90,60,40,.22)" stroke-width=".3"/>
+            </svg>
+            <div class="env-flap-shadow"></div>
             <div class="env-flap" data-env-flap>
               <div class="env-flap__face env-flap__face--out"></div>
               <div class="env-flap__face env-flap__face--in"></div>
             </div>
-            <div class="env-card-clip">
-              <!-- Sem pak dejte fotku/sken skutečné pozvánky (poměr cca 5:7) -->
-              <img class="env-card" data-env-card src="img/pozvanka.svg" alt="Svatební pozvánka: Maja a Jakub, 6. 7. 2027, obřad ve 14:00, Zámecký statek Lipová">
-            </div>
-            <svg class="env-front" viewBox="0 0 100 70" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M0 0 L47 38 Q50 40.5 53 38 L100 0 L100 70 L0 70Z" fill="var(--env-front)"/>
-              <path d="M0 70 L46 33 Q50 30 54 33 L100 70Z" fill="var(--env-bottom)"/>
-              <path d="M0 0 L47 38 Q50 40.5 53 38 L100 0" fill="none" stroke="var(--env-line)" stroke-width=".25"/>
-              <path d="M0 70 L46 33 Q50 30 54 33 L100 70" fill="none" stroke="var(--env-line)" stroke-width=".25"/>
-            </svg>
-            <div class="env-seal" data-env-seal aria-hidden="true"><span>M&amp;J</span></div>
+            <div class="env-seal" aria-hidden="true"><span>M&amp;M</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== ODPOČET ========== -->
-    <section class="countdown" aria-labelledby="countdown-title">
-      <img class="countdown__sprig countdown__sprig--l" src="img/sprig.svg" alt="" aria-hidden="true">
-      <img class="countdown__sprig countdown__sprig--r" src="img/sprig.svg" alt="" aria-hidden="true">
-      <p class="eyebrow eyebrow--light" id="countdown-title">Do našeho „ano“ zbývá</p>
+    <section class="countdown" aria-label="Odpočet do svatby">
+      <span class="smallcaps kicker">Do našeho „ano“ zbývá</span>
       <div class="countdown__grid" data-countdown>
-        <div><span data-cd="days">000</span><small>dní</small></div>
+        <div><span data-cd="days">0</span><small>dní</small></div>
         <div><span data-cd="hours">00</span><small>hodin</small></div>
         <div><span data-cd="minutes">00</span><small>minut</small></div>
         <div><span data-cd="seconds">00</span><small>sekund</small></div>
       </div>
-      <p class="countdown__date">úterý 6. července 2027 · 14:00</p>
     </section>
 
-    <!-- ========== PROGRAM ========== -->
-    <section class="section program" id="program" aria-labelledby="program-title">
-      <header class="section__head reveal">
-        <p class="eyebrow">6. 7. 2027</p>
-        <h2 id="program-title">Program dne</h2>
-        <img class="divider" src="img/divider.svg" alt="" aria-hidden="true">
-      </header>
-      <ol class="timeline">
-        <li class="reveal"><time>13:30</time><div><h3>Příjezd hostů</h3><p>Welcome drink na nádvoří statku.</p></div></li>
-        <li class="reveal"><time>14:00</time><div><h3>Obřad</h3><p>V zahradě pod starou lípou. Prosíme, buďte na místě včas.</p></div></li>
-        <li class="reveal"><time>15:00</time><div><h3>Gratulace &amp; focení</h3><p>Společná fotka všech hostů a drobné občerstvení.</p></div></li>
-        <li class="reveal"><time>16:30</time><div><h3>Svatební hostina</h3><p>Slavnostní večeře v sále – menu si vyberete ve formuláři.</p></div></li>
-        <li class="reveal"><time>18:30</time><div><h3>Krájení dortu</h3><p>A taky malý kvíz o nás dvou. Tip: přečtěte si <a href="pribeh.html">náš příběh</a>.</p></div></li>
-        <li class="reveal"><time>19:30</time><div><h3>První tanec</h3><p>Poté otevíráme parket pro všechny.</p></div></li>
-        <li class="reveal"><time>20:00</time><div><h3>Párty</h3><p>DJ, bar a tanec až do rána.</p></div></li>
-        <li class="reveal"><time>24:00</time><div><h3>Půlnoční překvapení</h3><p>Nechte se překvapit…</p></div></li>
-      </ol>
-    </section>
-
-    <!-- ========== MÍSTO + MAPA ========== -->
-    <section class="section place" id="misto" aria-labelledby="place-title">
-      <header class="section__head reveal">
-        <p class="eyebrow">Kde nás najdete</p>
-        <h2 id="place-title">Místo konání</h2>
-        <img class="divider" src="img/divider.svg" alt="" aria-hidden="true">
-      </header>
-      <div class="place__grid">
-        <div class="place__text reveal">
-          <h3>Zámecký statek Lipová</h3>
-          <p>Lipová 1, 380 00 Jižní Čechy<br><em>(dummy adresa – doplníme)</em></p>
-          <p>Obřad i hostina proběhnou na jednom místě. Parkování je přímo u statku, ubytování a doprava v <a href="pribeh.html#info">praktických informacích</a>.</p>
-          <a class="btn btn--small" href="https://maps.google.com/?q=Z%C3%A1mek%20Kratochv%C3%ADle" target="_blank" rel="noopener" data-map-link>Navigovat</a>
-        </div>
-        <div class="place__map reveal">
-          <!-- Změňte q=… na skutečné místo (stačí název nebo adresa) -->
-          <iframe title="Mapa místa konání" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Z%C3%A1mek%20Kratochv%C3%ADle&amp;z=14&amp;output=embed"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== RSVP ========== -->
-    <section class="rsvp" aria-labelledby="rsvp-title">
-      <img class="floral floral--rsvp" src="img/florals-corner.svg" alt="" aria-hidden="true">
-      <div class="rsvp__card reveal">
-        <p class="eyebrow">Prosíme o odpověď</p>
-        <h2 id="rsvp-title">Přijdete?</h2>
-        <p>Dejte nám vědět <strong>do 1. května 2027</strong>, jestli dorazíte, co si dáte k jídlu, jestli potřebujete ubytování a jakou písničku si chcete zatancovat.</p>
-        <a class="btn btn--lg" data-rsvp href="#" target="_blank" rel="noopener">Vyplnit formulář</a>
-        <p class="rsvp__note">Formulář zabere asi 2 minuty.</p>
-      </div>
-    </section>
-
-    <!-- ========== ODKAZ NA PŘÍBĚH ========== -->
-    <section class="teaser">
-      <a class="teaser__link reveal" href="pribeh.html">
-        <span class="eyebrow">Chcete vědět víc?</span>
-        <span class="teaser__title">Náš příběh, barvy svatby <br>&amp; praktické informace</span>
-        <span class="teaser__arrow" aria-hidden="true">→</span>
-      </a>
+    <section class="rsvp">
+      <p class="fleuron" aria-hidden="true"></p>
+      <h2>Přijdete?</h2>
+      <p>Prosíme, dejte nám vědět do 1. května 2027 a vyberte si, na co máte chuť.</p>
+      <a class="btn" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a>
     </section>
   </main>
 
-  <footer class="footer">
-    <p class="footer__mono">M<span>&amp;</span>J</p>
-    <p>6. 7. 2027 · Zámecký statek Lipová</p>
-    <p class="footer__small">Dotazy? Pište svědkům – kontakty najdete v <a href="pribeh.html#info">praktických informacích</a>.</p>
-  </footer>
+  <footer data-footer></footer>
 </body>
 </html>
