@@ -20,6 +20,9 @@
   /* one typeface for the whole site */
   --serif: "Cormorant Garamond", "Hoefler Text", Garamond, Georgia, serif;
 
+  --blush: #F2E4DF;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+
   --gutter: clamp(16px, 5vw, 56px);
   --maxw: 1040px;
 
@@ -39,7 +42,7 @@ body {
   line-height: 1.65;
   background-color: var(--paper);
   /* jemná textura papíru */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: var(--grain);
   overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
@@ -321,7 +324,7 @@ p { margin: 0 0 1em; }
 .palette__dot {
   width: clamp(54px, 11vw, 104px); aspect-ratio: 1; border-radius: 50%; margin-bottom: 1rem;
   background: var(--c);
-  box-shadow: 0 0 0 5px var(--paper), 0 0 0 6px var(--rule);
+  box-shadow: 0 0 0 5px var(--band-bg, var(--paper)), 0 0 0 6px var(--rule);
 }
 @media (max-width: 520px) {
   .palette { grid-template-columns: repeat(6, 1fr); row-gap: 26px; }
@@ -341,7 +344,7 @@ p { margin: 0 0 1em; }
 /* ==========================================================
    PATIČKA
    ========================================================== */
-.footer { text-align: center; padding: 44px var(--gutter) 40px; border-top: 3px double var(--rule); margin: 0 auto; max-width: calc(var(--maxw) + 2 * var(--gutter)); }
+.footer { text-align: center; padding: 48px var(--gutter) 44px; }
 .footer__brand { font-size: 1.8rem; margin-bottom: .2rem; }
 .footer p { color: var(--muted); font-size: .9rem; margin: 0; }
 
@@ -354,3 +357,41 @@ p { margin: 0 0 1em; }
   .page-head h1 { font-size: clamp(2.6rem, 12vw, 3.4rem); }
   .section { padding: 36px 0; }
 }
+
+/* ==========================================================
+   BAREVNÉ PÁSY PŘES CELOU ŠÍŘKU
+   Rudá jen tam, kde je málo textu; lesní zelená jako doplňková barva;
+   pudrová a slonová kost pro delší texty.
+   The band breaks out of the content column to the full window width,
+   while its padding keeps the content aligned with the column.
+   ========================================================== */
+.band {
+  --band-bg: var(--paper);
+  margin-inline: calc(50% - 50vw);
+  padding: clamp(56px, 8vw, 100px) max(var(--gutter), calc(50vw - 50%));
+  background: var(--band-bg) var(--grain);
+}
+.band--blush { --band-bg: var(--blush); }
+.band--red, .band--green {
+  --rule: rgba(250, 246, 239, .3);
+  --rule-soft: rgba(250, 246, 239, .16);
+  --muted: rgba(250, 246, 239, .8);
+  color: var(--paper-light);
+}
+.band--red { --band-bg: var(--red); }
+.band--green { --band-bg: var(--forest); }
+.band--red .kicker, .band--green .kicker { color: rgba(250, 246, 239, .85); }
+.band--red a:not(.btn), .band--green a:not(.btn) { color: var(--paper-light); }
+.band--red .time__clock, .band--green .time__clock { color: var(--paper-light); }
+.band--red .fleuron, .band--green .fleuron { background: rgba(250, 246, 239, .7); }
+.band--red .btn, .band--green .btn { background: var(--paper-light); border-color: var(--paper-light); color: var(--red); }
+.band--green .btn { color: var(--forest); }
+.band--red .btn:hover, .band--red .btn:focus-visible,
+.band--green .btn:hover, .band--green .btn:focus-visible { background: transparent; color: var(--paper-light); }
+.band--green .quiz-note { border-color: rgba(250, 246, 239, .55); outline-color: rgba(250, 246, 239, .55); }
+.band .times { border-top-color: var(--rule); }
+.band.chapter, .band + .chapter, .chapter + .band { border-top: 0; }
+.pullquote.band { max-width: none; }
+.pullquote.band::before, .pullquote.band::after { background: rgba(250, 246, 239, .7); }
+.countdown.band, .rsvp.band { padding-top: clamp(56px, 8vw, 96px); padding-bottom: clamp(56px, 8vw, 96px); }
+.band .section__title { margin-bottom: clamp(24px, 4vw, 40px); }
