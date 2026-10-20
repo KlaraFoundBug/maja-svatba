@@ -420,8 +420,6 @@ p { margin: 0 0 1em; }
 
 /* ---------- footer: RSVP + contact ---------- */
 .footer .btn { margin: 1.4rem 0 1rem; }
-.footer__contact { font-size: 15px; }
-.footer__contact a { color: var(--red); }
 
 /* ---------- phones: shorter envelope scroll ---------- */
 @media (max-width: 760px) {
