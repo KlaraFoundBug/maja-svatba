@@ -61,6 +61,24 @@
     }
   });
 
+  // ---------- Invite card: inline the SVG so it uses the site's web font ----------
+  // (if you replace pozvanka.svg with a photo/scan of the real invite, this simply does nothing)
+  const card = document.querySelector(".env-card");
+  if (card && card.getAttribute("src")?.endsWith(".svg")) {
+    fetch(card.getAttribute("src"))
+      .then((r) => (r.ok ? r.text() : Promise.reject()))
+      .then((text) => {
+        const svg = new DOMParser().parseFromString(text, "image/svg+xml").documentElement;
+        svg.removeAttribute("width");
+        svg.removeAttribute("height");
+        svg.setAttribute("class", "env-card");
+        svg.setAttribute("role", "img");
+        svg.setAttribute("aria-label", card.alt);
+        card.replaceWith(svg);
+      })
+      .catch(() => {});
+  }
+
   // ---------- Envelope scroll animation ----------
   // Scroll sets a target; each frame eases the drawn progress toward it (smooth, Apple-style).
   const stage = document.querySelector("[data-envelope-stage]");

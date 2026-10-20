@@ -7,13 +7,13 @@
 <rect width="600" height="840" filter="url(#paper)"/>
 <rect x="24" y="24" width="552" height="792" fill="none" stroke="#B3211E" stroke-width="1.2"/>
 <rect x="32" y="32" width="536" height="776" fill="none" stroke="#B3211E" stroke-width=".5"/>
-<g font-family="Didot, 'Bodoni 72', 'Cormorant Garamond', Georgia, serif" fill="#2A211E" text-anchor="middle">
+<g font-family="'Cormorant Garamond', 'Hoefler Text', Garamond, Georgia, serif" fill="#2A211E" text-anchor="middle">
   <circle cx="300" cy="135" r="46" fill="none" stroke="#B3211E" stroke-width=".8"/>
-  <text x="300" y="148" font-size="34" letter-spacing="2">M<tspan font-family="'Snell Roundhand', 'Pinyon Script', 'Apple Chancery', cursive" fill="#B3211E" font-size="30">&amp;</tspan>M</text>
+  <text x="300" y="148" font-size="34" letter-spacing="2">M<tspan font-style="italic" fill="#B3211E" font-size="32">&amp;</tspan>M</text>
   <text x="300" y="242" font-size="14" letter-spacing="5">SPOLU S RODIČI</text>
   <text x="300" y="266" font-size="14" letter-spacing="5">VÁS SRDEČNĚ ZVOU</text>
   <text x="300" y="358" font-size="66" letter-spacing="6">MÁJA</text>
-  <text x="300" y="420" font-family="'Snell Roundhand', 'Pinyon Script', 'Apple Chancery', cursive" font-size="56" fill="#B3211E">&amp;</text>
+  <text x="300" y="420" font-size="58" font-style="italic" fill="#B3211E">&amp;</text>
   <text x="300" y="490" font-size="66" letter-spacing="6">MÍŠA</text>
   <text x="300" y="548" font-size="14" letter-spacing="5">NA SVŮJ SVATEBNÍ DEN</text>
   <line x1="190" y1="580" x2="410" y2="580" stroke="#B3211E" stroke-width=".8"/>
@@ -21,6 +21,6 @@
   <line x1="190" y1="636" x2="410" y2="636" stroke="#B3211E" stroke-width=".8"/>
   <text x="300" y="676" font-size="14" letter-spacing="4">OBŘAD VE 13:00</text>
   <text x="300" y="704" font-size="18" font-style="italic">Stodola Plástovice</text>
-  <text x="300" y="772" font-family="'Snell Roundhand', 'Pinyon Script', 'Apple Chancery', cursive" font-size="26" fill="#B3211E">Těšíme se na vás</text>
+  <text x="300" y="772" font-size="24" font-style="italic" fill="#B3211E">Těšíme se na vás</text>
 </g>
 </svg>
