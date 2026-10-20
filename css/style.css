@@ -62,7 +62,7 @@ p { margin: 0 0 1em; }
 .btn--ghost:hover, .btn--ghost:focus-visible { background: var(--red); color: var(--paper-light); }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-.fleuron { width: 170px; height: 48px; margin: 0 auto .4rem; background: url("../img/flowers/flowers-divider.webp") center / contain no-repeat; }
+.fleuron { width: 56px; height: 1px; margin: 0 auto 1.1rem; background: var(--red); }
 
 /* ==========================================================
    HLAVIČKA (masthead)
@@ -256,7 +256,7 @@ p { margin: 0 0 1em; }
 .then__list { list-style: none; padding: 0; margin: 1.2rem 0 0; }
 .then__list li { font-family: var(--display); font-size: clamp(1.4rem, 3vw, 1.75rem); padding: .55rem 0; }
 .then__list li span { display: block; font-family: var(--body); font-size: .92rem; font-style: italic; color: var(--muted); }
-.then__list li + li::before { content: "❦"; display: block; color: var(--red); font-size: .9rem; opacity: .7; margin-bottom: .55rem; }
+.then__list li + li::before { content: ""; display: block; width: 28px; height: 1px; background: var(--red); opacity: .6; margin: 0 auto .7rem; }
 
 .venue { display: grid; gap: clamp(24px, 4vw, 40px); }
 .venue__info { text-align: center; max-width: 620px; margin: 0 auto; }
@@ -344,71 +344,13 @@ p { margin: 0 0 1em; }
 .footer { text-align: center; padding: 44px var(--gutter) 40px; border-top: 3px double var(--rule); margin: 0 auto; max-width: calc(var(--maxw) + 2 * var(--gutter)); }
 .footer__brand { font-family: var(--display); font-size: 1.8rem; margin-bottom: .2rem; }
 .footer p { color: var(--muted); font-size: .9rem; margin: 0; }
-.footer__flowers { width: min(320px, 70vw); margin: 0 auto 1rem; }
-
-/* ==========================================================
-   KVĚTINY
-   Fotky skutečných růží a gypsophily (vyříznuté, img/flowers/).
-   Desktop: kytice obtáčí jména a zdobí rohy stránek.
-   Telefony a tablety: girlanda nad nadpisem každé stránky.
-   ========================================================== */
-.garland { display: none; }
-.wreath { position: relative; width: fit-content; margin: 0 auto; padding: 0 .2em; }
-.wreath__flowers { position: absolute; width: clamp(200px, 21vw, 320px); pointer-events: none; z-index: -1; }
-.wreath__flowers--tl { top: -14%; right: calc(100% - 12px); }
-.wreath__flowers--br { bottom: -14%; left: calc(100% - 12px); transform: rotate(180deg); }
-.intro, .page-head { position: relative; z-index: 0; }
-
-/* top is set from the header height in main.js, so the flowers start just under the menu */
-.page-corners { position: absolute; left: 0; right: 0; top: 96px; height: 0; z-index: 10; pointer-events: none; }
-.page-corners img { position: absolute; top: 0; width: clamp(200px, 19vw, 320px); }
-.page-corners__l { left: 0; }
-.page-corners__r { right: 0; transform: scaleX(-1); }
-
-.footer__flowers { width: min(300px, 70vw); margin: 0 auto 1rem; }
 
 @media (max-width: 1023px) {
-  .wreath__flowers, .page-corners { display: none; }
-  .garland { display: block; margin: 0 auto 1.4rem; pointer-events: none; }
-  .garland--intro { width: min(560px, 92vw); margin-top: -10px; }
-  .garland--head { width: min(440px, 82vw); }
-  .intro { padding-top: 24px; }
-  .page-head { padding-top: 24px; }
+  .intro { padding-top: 32px; }
+  .page-head { padding-top: 32px; }
 }
 @media (max-width: 560px) {
   .intro__names { font-size: clamp(3.6rem, 19vw, 5.4rem); }
   .page-head h1 { font-size: clamp(2.6rem, 12vw, 3.4rem); }
   .section { padding: 36px 0; }
 }
-
-/* RSVP inside a round wreath */
-.rsvp__wreath {
-  width: min(640px, 96vw); aspect-ratio: 865 / 900; margin: 0 auto;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 0 16%; text-align: center;
-  background: url("../img/flowers/flowers-wreath.webp") center / contain no-repeat;
-}
-.rsvp__wreath p { width: 100%; max-width: 340px; margin: 0 auto 1.2rem; }
-.rsvp__wreath .btn { white-space: nowrap; }
-.rsvp { overflow: hidden; }
-@media (max-width: 520px) {
-  /* on phones the wreath may run past the screen edges so its centre is wide enough for the text */
-  .rsvp__wreath { width: 136vw; margin-left: calc(50% - 68vw); padding: 0 calc(34vw - 8px + 4%); }
-}
-@media (max-width: 420px) {
-  .rsvp__wreath h2 { font-size: 1.8rem; }
-  .rsvp__wreath p { font-size: .88rem; max-width: 240px; margin-bottom: .8rem; }
-  .rsvp__wreath .btn { padding: .8em 1.4em; }
-}
-
-/* little sprays tucked onto the story photos */
-.chapter__media.photo { position: relative; }
-.chapter__media.photo::after {
-  content: ""; position: absolute; top: -34px; right: -34px; width: clamp(110px, 14vw, 170px); aspect-ratio: 360 / 345;
-  background: url("../img/flowers/flowers-photo.webp") center / contain no-repeat; transform: scaleX(-1); pointer-events: none;
-}
-.chapter--flip .chapter__media.photo::after { right: auto; left: -34px; transform: none; }
-@media (max-width: 760px) { .chapter__media.photo::after { top: -22px; right: -14px; } .chapter--flip .chapter__media.photo::after { left: -14px; } }
-
-/* bouquet on the Místo page */
-.venue__bouquet { width: clamp(120px, 16vw, 170px); margin: 0 auto 1rem; }

@@ -39,23 +39,8 @@
   if (footer) {
     footer.className = "footer";
     footer.innerHTML = `
-      <img class="footer__flowers" src="img/flowers/flowers-garland.webp" alt="" aria-hidden="true">
       <p class="footer__brand">${cfg.bride} <span class="amp">&amp;</span> ${cfg.groom}</p>
       <p>${cfg.dateLabel} · ${cfg.venue}</p>`;
-  }
-
-  // ---------- Flower corners on inner pages (desktop; hidden on phones/tablets via CSS) ----------
-  if (page !== "index") {
-    const corners = document.createElement("div");
-    corners.className = "page-corners";
-    corners.setAttribute("aria-hidden", "true");
-    corners.innerHTML = `
-      <img class="page-corners__l" src="img/flowers/flowers-corner.webp" alt="">
-      <img class="page-corners__r" src="img/flowers/flowers-corner.webp" alt="">`;
-    document.body.prepend(corners);
-    const placeCorners = () => (corners.style.top = `${header?.offsetHeight ?? 0}px`);
-    addEventListener("resize", placeCorners);
-    placeCorners();
   }
 
   // ---------- RSVP links ----------
