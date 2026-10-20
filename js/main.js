@@ -94,9 +94,9 @@
     const draw = () => {
       current += (target - current) * 0.12;
       if (Math.abs(target - current) < 0.0005) current = target;
-      // 0–0.3 seal breaks & flap opens · 0.3–0.85 invite slides out · rest = hold
-      const open = smooth(clamp(current / 0.3));
-      const slide = smooth(clamp((current - 0.3) / 0.55));
+      // 0–0.08 sealed · 0.08–0.35 seal breaks & flap opens · 0.38–0.88 invite slides out · rest = hold
+      const open = smooth(clamp((current - 0.08) / 0.27));
+      const slide = smooth(clamp((current - 0.38) / 0.5));
       scene.style.setProperty("--open", open.toFixed(4));
       scene.style.setProperty("--slide", slide.toFixed(4));
       flap.classList.toggle("is-behind", open > 0.5);
@@ -104,8 +104,12 @@
     };
     const onScroll = () => {
       const rect = stage.getBoundingClientRect();
-      // starts while the envelope is still entering the screen (top at 75% of the viewport)
-      const lead = innerHeight * 0.75;
+      // starts only once the whole (closed, sealed) envelope is on screen
+      const sticky = stage.querySelector(".envelope-sticky");
+      const env = stage.querySelector(".envelope");
+      // distance from the stage top to the bottom of the (untransformed) envelope
+      const envBottom = parseFloat(getComputedStyle(sticky).paddingTop) + env.offsetHeight;
+      const lead = Math.max(0, innerHeight - envBottom - 24);
       target = clamp((lead - rect.top) / (rect.height - innerHeight + lead));
       if (!frame) frame = requestAnimationFrame(draw);
     };
