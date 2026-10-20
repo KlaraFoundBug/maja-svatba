@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<circle cx="32" cy="32" r="30" fill="#B3211E"/>
-<circle cx="32" cy="32" r="25" fill="none" stroke="#F4EEE3" stroke-opacity=".5" stroke-width="1"/>
-<text x="32" y="40" text-anchor="middle" font-family="'Cormorant Garamond', 'Hoefler Text', Georgia, serif" font-size="21" fill="#F4EEE3">M&amp;M</text>
+  <!-- black-and-white (tuxedo) cat head – placeholder until a real photo/drawing -->
+  <path d="M10 6 L24 20 Q32 17 40 20 L54 6 Q58 24 55 34 Q56 54 32 58 Q8 54 9 34 Q6 24 10 6Z" fill="#1d1b1b"/>
+  <path d="M14 12 L22 21 L15 25Z M50 12 L42 21 L49 25Z" fill="#e8a7a4" opacity=".55"/>
+  <path d="M32 22 Q36 30 40 34 Q48 40 46 48 Q42 56 32 56 Q22 56 18 48 Q16 40 24 34 Q28 30 32 22Z" fill="#fbf8f2"/>
+  <ellipse cx="22.5" cy="33" rx="4.2" ry="4.8" fill="#c9d65a"/>
+  <ellipse cx="41.5" cy="33" rx="4.2" ry="4.8" fill="#c9d65a"/>
+  <ellipse cx="22.5" cy="33.4" rx="1.4" ry="3.8" fill="#1d1b1b"/>
+  <ellipse cx="41.5" cy="33.4" rx="1.4" ry="3.8" fill="#1d1b1b"/>
+  <path d="M29.5 42 L34.5 42 L32 45Z" fill="#e48d93"/>
+  <path d="M32 45 Q30 48 27.5 47.5 M32 45 Q34 48 36.5 47.5" stroke="#1d1b1b" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M24 44 L10 42 M24 46 L11 48 M40 44 L54 42 M40 46 L53 48" stroke="#9a9590" stroke-width=".8" stroke-linecap="round"/>
 </svg>

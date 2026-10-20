@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates the dummy invite card and favicon.
+"""Generates the dummy invite card.
 
 Run from the repo root:  python3 tools/generate_art.py
 Replace img/pozvanka.svg with a photo/scan of the real invite whenever you have it.
@@ -45,16 +45,7 @@ def invite():
 """
 
 
-def favicon():
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<circle cx="32" cy="32" r="30" fill="{RED}"/>
-<circle cx="32" cy="32" r="25" fill="none" stroke="#F4EEE3" stroke-opacity=".5" stroke-width="1"/>
-<text x="32" y="40" text-anchor="middle" font-family="'Cormorant Garamond', 'Hoefler Text', Georgia, serif" font-size="21" fill="#F4EEE3">M&amp;M</text>
-</svg>
-"""
-
-
 if __name__ == "__main__":
     (IMG / "pozvanka.svg").write_text(invite())
-    (IMG / "favicon.svg").write_text(favicon())
+    # img/favicon.svg is now a hand-drawn cat, so it is not regenerated here
     print("Artwork written to", IMG)
