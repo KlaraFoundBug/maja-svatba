@@ -14,7 +14,7 @@ INK = "#2A211E"
 def invite():
     W, H = 600, 840
     # same typeface as the site (the page inlines this SVG, so the web font applies)
-    serif = "'Cormorant Garamond', 'Hoefler Text', Garamond, Georgia, serif"
+    serif = "'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif"
     script = serif
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}">
 <defs>

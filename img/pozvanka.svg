@@ -7,7 +7,7 @@
 <rect width="600" height="840" filter="url(#paper)"/>
 <rect x="24" y="24" width="552" height="792" fill="none" stroke="#B3211E" stroke-width="1.2"/>
 <rect x="32" y="32" width="536" height="776" fill="none" stroke="#B3211E" stroke-width=".5"/>
-<g font-family="'Cormorant Garamond', 'Hoefler Text', Garamond, Georgia, serif" fill="#2A211E" text-anchor="middle">
+<g font-family="'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif" fill="#2A211E" text-anchor="middle">
   <circle cx="300" cy="135" r="46" fill="none" stroke="#B3211E" stroke-width=".8"/>
   <text x="300" y="148" font-size="34" letter-spacing="2">M<tspan font-style="italic" fill="#B3211E" font-size="32">&amp;</tspan>M</text>
   <text x="300" y="242" font-size="14" letter-spacing="5">SPOLU S RODIČI</text>
