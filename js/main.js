@@ -40,7 +40,9 @@
     footer.className = "footer";
     footer.innerHTML = `
       <p class="footer__brand">${cfg.bride} <span class="amp">&amp;</span> ${cfg.groom}</p>
-      <p>${cfg.dateLabel} · ${cfg.venue}</p>`;
+      <p>${cfg.dateLabel} · ${cfg.venue}</p>
+      ${document.querySelector(".rsvp") ? "" : '<a class="btn" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a>'}
+      <p class="footer__contact">Dotazy? <a href="info.html#kontakt">Napište nebo zavolejte svědkům</a></p>`;
   }
 
   // ---------- RSVP links ----------
@@ -138,6 +140,17 @@
     };
     if (tick() !== false) timer = setInterval(tick, 1000);
   }
+
+  // ---------- Story on phones: show the first paragraph, rest behind "Číst dál" ----------
+  document.querySelectorAll(".chapter__text").forEach((text) => {
+    if (text.querySelectorAll("p").length < 2) return;
+    const more = document.createElement("button");
+    more.type = "button";
+    more.className = "read-more";
+    more.textContent = "Číst dál";
+    more.addEventListener("click", () => text.classList.add("is-open"));
+    text.append(more);
+  });
 
   // ---------- Quiz helper: add ?kviz to the URL to highlight quiz facts ----------
   if (new URLSearchParams(location.search).has("kviz")) document.body.classList.add("show-quiz");

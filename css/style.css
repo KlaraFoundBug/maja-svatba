@@ -403,3 +403,60 @@ p { margin: 0 0 1em; }
 .note::after { content: ""; display: block; width: 40px; height: 1px; background: var(--rule); margin: 1.4rem auto 0; }
 @media (max-width: 760px) { .notes { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .notes { grid-template-columns: 1fr; } }
+
+/* ---------- homepage quick facts ---------- */
+.quick { margin-top: 1.8rem; }
+.quick__facts {
+  list-style: none; padding: 0; margin: 0 auto 1.6rem; display: flex; justify-content: center; flex-wrap: wrap;
+  font-size: 15px; color: var(--muted);
+}
+.quick__facts li { padding: .2rem 1.1rem; }
+.quick__facts li + li { border-left: 1px solid var(--rule); }
+.quick__facts strong { font-family: var(--display); font-weight: 400; font-size: 1.25rem; color: var(--red); margin-right: .3rem; }
+.quick__facts a { color: var(--ink); text-underline-offset: 4px; }
+.quick__note { font-size: 14px; color: var(--muted); margin: .9rem 0 0; }
+.quick__note a { color: var(--red); }
+@media (max-width: 480px) {
+  .quick__facts li { padding: .2rem .7rem; }
+  .quick__facts li:last-child { flex-basis: 100%; border-left: 0; margin-top: .3rem; }
+}
+
+/* ---------- tap-to-call contacts ---------- */
+.call { display: grid; gap: .6rem; max-width: 280px; margin: 1rem auto 0; }
+.call__btn {
+  display: block; text-decoration: none; border: 1px solid var(--red); color: var(--red) !important;
+  padding: .7rem 1rem; font-size: 16px; font-weight: 700; letter-spacing: .02em; transition: background .25s, color .25s;
+}
+.call__btn span { display: block; font-size: 13px; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .15rem; }
+.call__btn:hover, .call__btn:focus-visible { background: var(--red); color: #fff !important; }
+.call__btn:hover span, .call__btn:focus-visible span { color: rgba(255, 255, 255, .85); }
+
+/* ---------- program: ride home ---------- */
+.ride { margin: clamp(36px, 5vw, 56px) auto 0; padding: 1.6rem 1.4rem; border: 1px solid var(--rule); max-width: 460px; text-align: center; }
+.ride p { margin: .2rem 0; }
+.ride p + p { font-size: 15px; color: var(--muted); }
+.ride strong { font-family: var(--display); font-weight: 400; font-size: 1.2rem; color: var(--red); }
+
+/* ---------- footer: RSVP + contact ---------- */
+.footer .btn { margin: 1.4rem 0 1rem; }
+.footer__contact { font-size: 15px; }
+.footer__contact a { color: var(--red); }
+
+/* ---------- phones: shorter envelope scroll ---------- */
+@media (max-width: 760px) {
+  .envelope-stage { height: 150vh; }
+}
+
+/* ---------- phones: shorter story ---------- */
+.read-more { display: none; }
+@media (max-width: 760px) {
+  .chapter__media { max-width: 280px; }
+  .photo--land img { aspect-ratio: 4 / 3; }
+  .chapter__text:not(.is-open) p:not(:first-of-type) { display: none; }
+  .read-more {
+    display: inline-block; background: none; border: 0; padding: .3rem 0; cursor: pointer;
+    font: 700 13px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--red);
+    border-bottom: 1px solid currentColor;
+  }
+  .chapter__text.is-open .read-more { display: none; }
+}
