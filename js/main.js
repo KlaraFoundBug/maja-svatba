@@ -42,7 +42,7 @@
       <p class="footer__brand">${cfg.bride} <span class="amp">&amp;</span> ${cfg.groom}</p>
       <p>${cfg.dateLabel} · ${cfg.venue}</p>
       ${document.querySelector(".rsvp") ? "" : '<a class="btn" data-rsvp href="#" target="_blank" rel="noopener">Potvrdit účast</a>'}
-      <p class="footer__contact">Dotazy? <a href="info.html#kontakt">Napište nebo zavolejte svědkům</a></p>`;
+      <p class="footer__contact">Něco naléhavého v den svatby? <a href="info.html#kontakt">Kontakty na svědky</a></p>`;
   }
 
   // ---------- RSVP links ----------
